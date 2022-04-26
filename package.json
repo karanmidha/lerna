@@ -9,7 +9,7 @@
     "utils/*"
   ],
   "scripts": {
-    "build": "rimraf dist/ && babel commands/ --out-dir dist/commands/ --ignore **/__tests__,**/__mocks__ && babel core/ --out-dir dist/core/ --ignore **/__tests__,**/__mocks__ && babel utils/ --out-dir dist/utils/ --ignore **/__tests__,**/__mocks__",
+    "build": "rimraf dist/ && babel commands/ --out-dir dist/commands/ --ignore **/__tests__,**/__mocks__ && babel core/ --out-dir dist/core/ --ignore **/__tests__,**/__mocks__ && babel utils/ --out-dir dist/utils/ --ignore **/__tests__,**/__mocks__ && babel helpers/ --out-dir dist/helpers/ --ignore **/__tests__,**/__mocks__",
     "prerelease": "npm test && npm run integration",
     "release": "env-cmd lerna version",
     "postversion": "lerna publish from-git",
@@ -164,6 +164,6 @@
     "touch": "^3.1.0"
   },
   "engines": {
-    "node": ">= 16.14.2"
+    "node": ">= 12.22.0"
   }
 }
